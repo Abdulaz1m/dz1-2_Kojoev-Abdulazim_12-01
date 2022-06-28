@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import { useDispatch, useSelector } from 'react-redux/es/exports';
 import './App.css';
+import { clearHelloAction, sayHelloAction } from './actions/actions';
+import MainPage from './pages/mainPage/MainPage';
+import NumberPage from './pages/numberPage/NumberPage';
 
 function App() {
+  const dispatch = useDispatch()
+
+
+  const sayHello = () => {
+    dispatch(sayHelloAction("Abdulazim"))
+  }
+
+  const clearHello = () => {
+    dispatch(clearHelloAction())
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MainPage/>
+      <NumberPage/>
+    </>
   );
 }
 

@@ -1,0 +1,7 @@
+export const types = {
+    CREATE_USER: "CREATE_USER",
+    ADD_NAME: "ADD_NAME",
+    CLEAR_FIELDS: "CLEAR_FIELDS",
+    ADD_NUMBER: "ADD_NUMBER",
+    CREATE_NUMBER: "CREATE_NUMBER",
+}
